@@ -3,94 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis Tres Comidas Favoritas</title>
+    <title>Mis Comidas Favoritas | Landing Page</title>
     
     <style>
+        /* --- ARQUITECTURA DE ESTILOS (CSS3) --- */
         :root {
-            --color-primario: #2c3e50;
-            --color-secundario: #e67e22;
-            --color-fondo: #f4f4f4;
-            --fuente: 'Segoe UI', Arial, sans-serif;
+            --primario: #2c3e50;    /* Azul elegante */
+            --secundario: #e67e22;  /* Naranja vibrante */
+            --fondo: #ecf0f1;
+            --blanco: #ffffff;
+            --fuente: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
             font-family: var(--fuente);
+            background-color: var(--fondo);
+            color: var(--primario);
             line-height: 1.6;
-            margin: 0;
-            background-color: var(--color-fondo);
-            color: var(--color-primario);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
+        /* Encabezado */
         header {
-            background-color: var(--color-primario);
-            color: white;
+            background-color: var(--primario);
+            color: var(--blanco);
+            padding: 3rem 1rem;
             text-align: center;
-            padding: 2rem 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contenedor Principal */
         main {
-            max-width: 800px;
+            flex: 1;
+            max-width: 900px;
             margin: 2rem auto;
-            padding: 0 1rem;
+            padding: 0 1.5rem;
         }
 
-        /* Imagen Responsiva */
-        .hero-img {
+        /* Imagen Representativa */
+        .img-container {
             width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            height: 350px;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            margin-bottom: 2rem;
         }
 
-        .card {
-            background: white;
-            padding: 2rem;
-            margin-top: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .img-container img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Sección de Contenido */
+        .info-card {
+            background-color: var(--blanco);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
         h2 {
-            color: var(--color-secundario);
-            border-bottom: 2px solid var(--color-fondo);
-            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--secundario);
+            font-size: 1.8rem;
+            border-bottom: 3px solid var(--fondo);
+            display: inline-block;
         }
 
-        /* Lista Ordenada Estilizada */
+        /* Lista Ordenada */
         ol {
-            padding-left: 1.5rem;
+            margin-left: 1.2rem;
+            margin-bottom: 2rem;
         }
 
         li {
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
             font-size: 1.1rem;
+            padding-left: 0.5rem;
+        }
+
+        li strong {
+            color: var(--primario);
         }
 
         /* Botón Interactivo (Hover) */
-        .btn {
+        .btn-accion {
             display: inline-block;
-            background-color: var(--color-primario);
-            color: white;
-            padding: 0.8rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
+            background-color: var(--primario);
+            color: var(--blanco);
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
             font-weight: bold;
-            transition: all 0.3s ease;
-            cursor: pointer;
+            text-decoration: none;
+            border-radius: 50px;
             border: none;
-            margin-top: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3);
         }
 
-        .btn:hover {
-            background-color: var(--color-secundario);
-            transform: scale(1.05); /* Efecto visual extra */
+        .btn-accion:hover {
+            background-color: var(--secundario);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(230, 126, 34, 0.4);
         }
 
         /* Diseño Responsive (Media Queries) */
         @media (max-width: 600px) {
-            header h1 { font-size: 1.5rem; }
-            .card { padding: 1rem; }
+            header h1 { font-size: 1.8rem; }
+            .img-container { height: 200px; }
+            .info-card { padding: 1.5rem; }
+            .btn-accion { width: 100%; text-align: center; }
         }
 
         footer {
@@ -104,29 +147,32 @@
 <body>
 
     <header>
-        <h1>Mi Gastronomía Favorita</h1>
-        <p>Un análisis de sabores y nutrientes</p>
+        <h1>Mi Selección Gastronómica</h1>
+        <p>Eficiencia y Sabor en cada plato</p>
     </header>
 
     <main>
-        <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80" alt="Comida deliciosa" class="hero-img">
+        <div class="img-container">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1000&q=80" alt="Comida deliciosa preparada">
+        </div>
 
-        <section class="card">
-            <h2>Top 3 Platos Imprescindibles</h2>
+        <article class="info-card">
+            <h2>Mis 3 Favoritos</h2>
+            
             <ol>
-                <li><strong>Arepas con Todo:</strong> La base perfecta, rica en carbohidratos para el rendimiento diario.</li>
-                <li><strong>Pasta Carbonara:</strong> Eficiencia pura en preparación y aporte energético.</li>
-                <li><strong>Pabellón Criollo:</strong> El equilibrio definitivo entre proteína, fibra y sabor regional.</li>
+                <li><strong>Arepas Gourmet:</strong> Por su versatilidad infinita y su capacidad de adaptarse a cualquier relleno proteico.</li>
+                <li><strong>Pasta a la Carbonara:</strong> Un clásico de la ingeniería culinaria que combina carbohidratos y grasas de forma magistral.</li>
+                <li><strong>Pabellón Criollo:</strong> El sistema completo: arroz, granos, carne y plátano. Energía pura para el "grind" diario.</li>
             </ol>
 
-            <button class="btn" onclick="alert('¡Gracias por visitar mi Reino de la Ciencia Gastronómica!')">
-                ¡Haz clic aquí!
+            <button class="btn-accion" onclick="alert('¡Has activado el Reino de la Ciencia Culinaria!')">
+                ¡Buen Provecho!
             </button>
-        </section>
+        </article>
     </main>
 
     <footer>
-        <p>Diseño Web Estático &copy; 2026 | Optimización al 10,000,000%</p>
+        <p>Desarrollo Web Estático 2026 | Optimización Sistemática</p>
     </footer>
 
 </body>
