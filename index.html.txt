@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Tres Comidas Favoritas</title>
+    
+    <style>
+        :root {
+            --color-primario: #2c3e50;
+            --color-secundario: #e67e22;
+            --color-fondo: #f4f4f4;
+            --fuente: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            font-family: var(--fuente);
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--color-fondo);
+            color: var(--color-primario);
+        }
+
+        header {
+            background-color: var(--color-primario);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* Imagen Responsiva */
+        .hero-img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            margin-top: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--color-secundario);
+            border-bottom: 2px solid var(--color-fondo);
+            padding-bottom: 0.5rem;
+        }
+
+        /* Lista Ordenada Estilizada */
+        ol {
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Botón Interactivo (Hover) */
+        .btn {
+            display: inline-block;
+            background-color: var(--color-primario);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            background-color: var(--color-secundario);
+            transform: scale(1.05); /* Efecto visual extra */
+        }
+
+        /* Diseño Responsive (Media Queries) */
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.5rem; }
+            .card { padding: 1rem; }
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mi Gastronomía Favorita</h1>
+        <p>Un análisis de sabores y nutrientes</p>
+    </header>
+
+    <main>
+        <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80" alt="Comida deliciosa" class="hero-img">
+
+        <section class="card">
+            <h2>Top 3 Platos Imprescindibles</h2>
+            <ol>
+                <li><strong>Arepas con Todo:</strong> La base perfecta, rica en carbohidratos para el rendimiento diario.</li>
+                <li><strong>Pasta Carbonara:</strong> Eficiencia pura en preparación y aporte energético.</li>
+                <li><strong>Pabellón Criollo:</strong> El equilibrio definitivo entre proteína, fibra y sabor regional.</li>
+            </ol>
+
+            <button class="btn" onclick="alert('¡Gracias por visitar mi Reino de la Ciencia Gastronómica!')">
+                ¡Haz clic aquí!
+            </button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Diseño Web Estático &copy; 2026 | Optimización al 10,000,000%</p>
+    </footer>
+
+</body>
+</html>
