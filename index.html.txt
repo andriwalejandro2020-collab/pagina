@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Tres Comidas Favoritas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Sabores Favoritos</h1>
+        <p>Una breve muestra de mis platos predilectos</p>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Mesa con variedad de comida deliciosa" class="main-img">
+        </section>
+
+        <section class="content">
+            <h2>Mi Top 3 Gastronomico</h2>
+            <ol>
+                <li><strong>Arepas:</strong> Estas pegan con todo.</li>
+                <li><strong>Pasta con carne molida tajadas y frequito:</strong> Tremendo almuerzo diez de diez.</li>
+                <li><strong>Combito de perros con frequito:</strong> Sabroso papa.</li>
+            </ol>
+
+            <button class="btn-interactivo">¡Saber mas!</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Proyecto de Desarrollo Web Estático</p>
+    </footer>
+
+</body>
+</html>

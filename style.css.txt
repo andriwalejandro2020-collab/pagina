@@ -1,0 +1,74 @@
+/* Configuración General */
+:root {
+    --color-primario: #2c3e50;
+    --color-secundario: #e67e22;
+    --color-fondo: #f4f4f4;
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    line-height: 1.6;
+    margin: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-primario);
+}
+
+/* Header */
+header {
+    background-color: var(--color-primario);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+/* Contenido Principal */
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.main-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.content {
+    background: white;
+    padding: 2rem;
+    margin-top: -2rem;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Botón con cambio de color al pasar el mouse (Hover) */
+.btn-interactivo {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave */
+    margin-top: 1rem;
+}
+
+.btn-interactivo:hover {
+    background-color: var(--color-secundario); /* Cambio de color */
+}
+
+/* Diseño Responsivo (Media Query) */
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 3rem;
+    }
+    
+    .content {
+        padding: 3rem;
+    }
+}
